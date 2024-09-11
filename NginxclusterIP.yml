@@ -1,18 +1,13 @@
 apiVersion: v1
-kind : Service
-metadata :
-    name: app1-nginx-clusterip-service
-    labels : 
-     app : app1-nginx
-
-
-     spec :
-       type : app1-nginx-clusterip-service
-
-     selector :
-           app : app1-nginx
-
-    port:
-       - port : 80
-         targetport : 80
-
+kind: Service
+metadata:
+  name: app1-nginx-clusterip-service
+  labels:
+    app: app1-nginx
+spec:
+  type: ClusterIP
+  selector:
+    app: app1-nginx
+  ports:
+    - port: 80
+      targetPort: 80
