@@ -1,5 +1,5 @@
 appversion : apiregistration.k8s.io/v1
-kind : APIService
+kind : Service
 metadata :
     name: app1-nginx-clusterip-service
     labels : 
